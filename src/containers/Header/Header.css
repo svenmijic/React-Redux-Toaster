@@ -1,0 +1,15 @@
+header {
+    width: 100%;
+    background: linear-gradient(to left, #21ba45, #2185d0);
+}
+header .menu {
+    width: 90%;
+    align-items: center;
+}
+header > div.menu .item {
+    padding: 25px 10px !important;
+    font-size: 22px;
+    color: #e9e9ea !important;
+    transition: all 0.15s ease-in-out !important;
+    cursor: pointer;
+}

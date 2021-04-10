@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+html,
+body {
+    min-height: 100%;
+    overflow: auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0 !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#layout header,
+#layout footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
-
-.App-link {
-  color: #61dafb;
+body > div.ui.basic.segment.toast-container.visible.transition {
+    width: 90%;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: fixed;
+    top: 41px;
+    z-index: 5000;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#layout main,
+#layout header .menu,
+#layout footer > div {
+    width: 90%;
+}
+#layout header .menu .item,
+#layout header .menu .right.item,
+#layout footer div {
+    padding: auto 15px !important;
+    max-height: 20px;
+}
+#layout main {
+    align-self: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+#layout footer {
+    margin-top: auto;
+}
+.message {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.toast-message {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 16px !important;
+    padding: 10px 14px !important;
+}
+.ui.positive.message {
+    background-color: #21ba45;
+}
+.ui.negative.message {
+    background-color: #db2828;
 }
